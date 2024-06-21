@@ -1,3 +1,5 @@
+package org.example;
+
 public class PasswordValidator {
 
     @MinLength(6)
@@ -5,6 +7,7 @@ public class PasswordValidator {
     @ContainsDigit
     @ContainsUpperLowerCase
     public boolean isValid(String password) {
-        // Логіка перевірки залишилася незмінною
+
+        return RuntimeValidator.validate(this, password);
     }
 }
